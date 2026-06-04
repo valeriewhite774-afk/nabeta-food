@@ -1388,7 +1388,7 @@ export default function App() {
                             onClick={() => setActiveView('checkout')}
                             className="w-full mt-4 bg-[#40685D] hover:bg-[#32524a] text-white py-3 rounded-2xl font-bold uppercase transition-transform active:scale-95"
                           >
-                            Proceed to Secure Paystack Checkout
+                            Proceed to Secure Checkout
                           </button>
                         </div>
                       </div>

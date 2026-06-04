@@ -62,6 +62,15 @@
         "location": { "type": "string" }
       },
       "required": ["menuItemId", "stars", "text", "author", "location"]
+    },
+    "Setting": {
+      "title": "Application Setting",
+      "description": "Global application setting or configuration",
+      "type": "object",
+      "properties": {
+        "paystackKey": { "type": "string" }
+      },
+      "required": ["paystackKey"]
     }
   },
   "firestore": {
@@ -80,6 +89,10 @@
     "/reviews/{reviewId}": {
       "schema": "Review",
       "description": "General product reviews and evaluations"
+    },
+    "/settings/{settingId}": {
+      "schema": "Setting",
+      "description": "Global application configurations"
     }
   }
 }
