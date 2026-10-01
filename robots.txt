@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /order.html
-
-Sitemap: https://nabetafood.com/sitemap.xml
