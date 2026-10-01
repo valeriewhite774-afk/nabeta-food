@@ -439,10 +439,17 @@ function updateCartBadge() {
 function initReveal() {
   const obs = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        e.target.classList.remove('will-reveal');
+        obs.unobserve(e.target);
+      }
     });
-  }, { threshold: 0.08 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.reveal').forEach(el => {
+    el.classList.add('will-reveal');
+    obs.observe(el);
+  });
 }
 
 // ── FAQ Toggle ────────────────────────────────────────────────
