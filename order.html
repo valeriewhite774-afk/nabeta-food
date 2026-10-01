@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order | NabetaFood</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="/css/nabetafood.css">
+  <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+<body style="background:var(--bg);">
+
+  <div id="nav-placeholder"></div>
+
+  <!-- SCREEN 1: CUSTOMISE -->
+  <div id="s1" class="scr active">
+    <div class="cart-header">
+      <button class="back-btn" onclick="goBack()" aria-label="Back"><i class="ti ti-arrow-left" style="font-size:16px;color:var(--text-m);"></i></button>
+      <div style="flex:1;"><p id="s1-title" style="font-size:15px;font-weight:600;margin:0;color:var(--text);">Customise Your Order</p></div>
+      <div class="progress-dots"><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div></div>
+    </div>
+    <div style="padding:20px 0 140px;">
+      <div class="container">
+        <div id="pdp-grid" style="display:grid;grid-template-columns:1fr;gap:24px;">
+          <div id="pdp-left"></div>
+          <div id="pdp-right"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 2: CHECKOUT -->
+  <div id="s2" class="scr">
+    <div class="cart-header">
+      <button class="back-btn" onclick="goScreen(1)" aria-label="Back"><i class="ti ti-arrow-left" style="font-size:16px;color:var(--text-m);"></i></button>
+      <div style="flex:1;"><p style="font-size:15px;font-weight:600;margin:0;color:var(--text);">Delivery Details</p></div>
+      <div class="progress-dots"><div class="pdot"></div><div class="pdot on"></div><div class="pdot"></div></div>
+    </div>
+    <div style="padding:24px 0 120px;">
+      <div class="container" style="max-width:560px;">
+        <div id="cart-summary" style="background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:16px;margin-bottom:24px;"></div>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:24px;">
+          <div class="form-group">
+            <label class="form-label">Full Name</label>
+            <input class="form-input" id="iname" type="text" placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone Number</label>
+            <input class="form-input" id="iphone" type="tel" placeholder="Your phone number" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Delivery Address</label>
+            <input class="form-input" id="iaddr" type="text" placeholder="Your full address in Warri" autocomplete="street-address">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Loyalty Phone (optional)</label>
+            <p style="font-size:11px;color:var(--text-l);margin-bottom:6px;">Enter to earn points on this order. <a href="/rewards.html" style="color:var(--gold);">Learn more</a></p>
+            <input class="form-input" id="iloyalty" type="tel" placeholder="Phone number for points">
+          </div>
+        </div>
+        <div class="price-summary" style="margin-bottom:16px;">
+          <div id="order-lines" style="display:flex;flex-direction:column;gap:8px;font-size:13px;color:var(--text-m);margin-bottom:14px;"></div>
+          <div style="border-top:1px solid var(--border);padding-top:14px;display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-size:15px;font-weight:700;color:var(--text);">Total</span>
+            <span id="order-total" style="font-family:'DM Mono',monospace;font-size:22px;font-weight:500;color:var(--gold);"></span>
+          </div>
+        </div>
+        <button onclick="launchPaystack()" class="btn btn-gold btn-full" style="padding:16px;font-size:15px;">
+          <i class="ti ti-lock" style="font-size:16px;"></i> Pay Securely with Paystack
+        </button>
+        <p style="font-size:11px;color:var(--text-l);text-align:center;margin-top:10px;">
+          Card · Bank Transfer · USSD · Secured by Paystack
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: CONFIRMATION -->
+  <div id="s3" class="scr">
+    <div style="padding:40px 0 60px;">
+      <div class="container" style="max-width:560px;text-align:center;">
+        <div class="conf-icon"><i class="ti ti-check"></i></div>
+        <h2 class="display" id="conf-name" style="font-size:28px;font-weight:600;color:var(--text);margin-bottom:6px;"></h2>
+        <p style="font-size:15px;color:var(--text-m);margin-bottom:4px;">Your order don land! We are on it.</p>
+        <p id="conf-oid" style="font-family:'DM Mono',monospace;font-size:12px;color:var(--text-l);margin-bottom:28px;"></p>
+
+        <div class="conf-card" style="text-align:left;background:rgba(200,169,110,0.06);border-color:rgba(200,169,110,0.2);margin-bottom:14px;">
+          <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--gold);margin-bottom:8px;">Estimated Delivery</p>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <i class="ti ti-motorbike" style="font-size:20px;color:var(--gold);"></i>
+            <p id="conf-eta" style="font-size:16px;font-weight:700;color:var(--text);margin:0;"></p>
+          </div>
+          <p id="conf-addr" style="font-size:12px;color:var(--text-m);margin:0;"></p>
+        </div>
+
+        <div class="conf-card" style="text-align:left;margin-bottom:14px;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <i class="ti ti-shield-check" style="font-size:18px;color:var(--success);"></i>
+            <p style="font-size:13px;font-weight:600;color:var(--text);margin:0;">Payment confirmed via Paystack</p>
+          </div>
+          <p id="conf-ref" style="font-family:'DM Mono',monospace;font-size:11px;color:var(--text-l);margin:0;"></p>
+        </div>
+
+        <div class="conf-card" style="text-align:left;margin-bottom:14px;">
+          <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--text-l);margin-bottom:10px;">Order Summary</p>
+          <div id="conf-items" style="font-size:13px;color:var(--text-m);margin-bottom:10px;"></div>
+          <div style="border-top:1px solid var(--border);padding-top:12px;display:flex;justify-content:space-between;">
+            <span style="font-weight:700;color:var(--text);">Total Paid</span>
+            <span id="conf-total" style="font-family:'DM Mono',monospace;font-weight:500;color:var(--gold);font-size:16px;"></span>
+          </div>
+        </div>
+
+        <div id="conf-loyalty" style="display:none;" class="conf-card" style="text-align:left;margin-bottom:14px;background:rgba(200,169,110,0.05);border-color:rgba(200,169,110,0.15);">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <i class="ti ti-star" style="font-size:18px;color:var(--gold);"></i>
+            <div>
+              <p id="conf-points-msg" style="font-size:13px;font-weight:600;color:var(--text);margin:0;"></p>
+              <a href="/rewards.html" style="font-size:11px;color:var(--gold);">Check your points balance →</a>
+            </div>
+          </div>
+        </div>
+
+        <p style="font-size:12px;color:var(--text-l);margin-bottom:20px;line-height:1.65;">
+          Questions? Reach us at <strong style="color:var(--text);">orders@nabetafood.com</strong><br>
+          Track your order at <a href="/track.html" style="color:var(--gold);">nabetafood.com/track</a>
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <a href="/menu.html" class="btn btn-gold">Place Another Order</a>
+          <a href="/track.html" class="btn btn-surface">Track This Order</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cart-bar" id="cart-bar">
+    <div class="container">
+      <button onclick="goScreen(2)" class="btn btn-gold btn-full" style="padding:15px;font-size:15px;justify-content:space-between;">
+        <span id="cart-bar-label">Continue to Checkout</span>
+        <span id="cart-bar-total"></span>
+      </button>
+    </div>
+  </div>
+
+  <script src="/js/nabetafood.js"></script>
+  <script>
+  (function() {
+    const { SOUPS, SWALLOWS, NBF, fmt, generateUUID, supabasePost, initPage, addLoyaltyPoints } = window.NBF_LIB;
+
+    initPage('menu');
+
+    // State
+    let cur = null, selP = {}, selS = null, qty = 1, carIdx = 0;
+
+    function goBack() {
+      const ref = document.referrer;
+      if (ref && ref.includes('nabetafood.com')) history.back();
+      else window.location.href = '/menu.html';
+    }
+    window.goBack = goBack;
+
+    function goScreen(n) {
+      document.querySelectorAll('.scr').forEach((s, i) => s.classList.toggle('active', i + 1 === n));
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      if (n === 2) renderCheckout();
+    }
+    window.goScreen = goScreen;
+
+    // Get soup from URL
+    const params = new URLSearchParams(window.location.search);
+    const soupSlug = params.get('soup');
+    cur = SOUPS.find(s => s.slug === soupSlug) || SOUPS[0];
+    selS = cur.defaults.swallow;
+
+    document.getElementById('s1-title').textContent = 'Customise Your ' + cur.name;
+
+    // Render PDP left
+    document.getElementById('pdp-left').innerHTML = `
+      <div style="border-radius:20px;overflow:hidden;">
+        <img src="${cur.img}" alt="${cur.name}" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+      </div>`;
+
+    // Render PDP right
+    function renderRight() {
+      const defProts = cur.defaults.proteins.map(p => `<span class="plate-chip">${p.qty}&#215; ${p.n}</span>`).join(' ');
+      const defSwallow = `<span class="plate-chip">2&#215; ${cur.defaults.swallow}</span>`;
+
+      const protsHTML = cur.proteins.map((pt, j) => `
+        <button class="tog-btn ${selP[pt.n] ? 'on' : ''}" id="pt${j}" onclick="toggleProt(${j})">
+          <p class="tog-name" style="font-size:13px;font-weight:600;margin:0 0 3px;color:var(--text);">${pt.n}</p>
+          <p style="font-size:11px;margin:0;color:var(--text-l);">+${fmt(pt.p)}</p>
+        </button>`).join('');
+
+      const swalsHTML = SWALLOWS.map((sw, j) => `
+        <button class="tog-btn ${sw === selS ? 'on' : ''}" onclick="toggleSwallow('${sw}', ${j})">
+          <p style="font-size:13px;font-weight:600;margin:0;color:${sw === selS ? 'var(--gold)' : 'var(--text)'};">${sw}</p>
+        </button>`).join('');
+
+      document.getElementById('pdp-right').innerHTML = `
+        <div>
+          <span class="soup-card-badge" style="margin-bottom:12px;display:inline-block;">${cur.badge}</span>
+          <h1 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:600;color:var(--text);margin:0 0 8px;">${cur.name}</h1>
+          <p style="font-size:14px;color:var(--text-m);line-height:1.75;margin:0 0 20px;">${cur.desc}</p>
+
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:20px;">
+            <p style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin:0 0 10px;">Your Plate Includes</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;">${defProts} ${defSwallow}</div>
+            <p style="font-size:11px;color:var(--text-l);margin:0;">Base price: <strong style="color:var(--gold);font-family:'DM Mono',monospace;">${fmt(cur.price)}</strong></p>
+          </div>
+
+          <p style="font-size:14px;font-weight:600;color:var(--text);margin:0 0 4px;">Add More Proteins <span style="font-size:12px;font-weight:400;color:var(--text-l);">optional</span></p>
+          <p style="font-size:11px;color:var(--text-l);margin:0 0 10px;">Default proteins already included.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px;">${protsHTML}</div>
+
+          <p style="font-size:14px;font-weight:600;color:var(--text);margin:0 0 10px;">Change Swallow <span style="font-size:12px;font-weight:400;color:var(--text-l);">optional</span></p>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px;">${swalsHTML}</div>
+
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:20px;">
+            <p style="font-size:14px;font-weight:600;color:var(--text);margin:0;">Qty</p>
+            <div style="display:flex;align-items:center;border:1px solid var(--border);border-radius:12px;overflow:hidden;">
+              <button onclick="adjQty(-1)" style="width:40px;height:40px;background:var(--surface);border:none;font-size:20px;color:var(--text-m);cursor:pointer;">&#8722;</button>
+              <span id="qty-display" style="width:40px;text-align:center;font-size:15px;font-weight:600;color:var(--text);">1</span>
+              <button onclick="adjQty(1)" style="width:40px;height:40px;background:var(--surface);border:none;font-size:20px;color:var(--text-m);cursor:pointer;">+</button>
+            </div>
+          </div>
+
+          <div class="price-summary" style="margin-bottom:16px;">
+            <div id="price-lines" style="display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--text-m);margin-bottom:12px;"></div>
+            <div style="border-top:1px solid var(--border);padding-top:12px;display:flex;justify-content:space-between;align-items:center;">
+              <span style="font-size:14px;font-weight:700;color:var(--text);">Item Total</span>
+              <span id="item-total" style="font-family:'DM Mono',monospace;font-size:20px;font-weight:500;color:var(--gold);"></span>
+            </div>
+          </div>
+        </div>`;
+
+      updatePrice();
+    }
+
+    renderRight();
+
+    // Cart bar
+    const cartBar = document.getElementById('cart-bar');
+    cartBar.style.display = 'block';
+    updateCartBar();
+
+    function updateCartBar() {
+      const total = calcTotal();
+      document.getElementById('cart-bar-total').textContent = fmt(total);
+    }
+
+    function calcTotal() {
+      const extras = Object.entries(selP).reduce((s, [n, q]) => s + (cur.proteins.find(p => p.n === n)?.p || 0) * q, 0);
+      return (cur.price + extras) * qty;
+    }
+
+    function updatePrice() {
+      const priceLines = document.getElementById('price-lines');
+      const itemTotal  = document.getElementById('item-total');
+      if (!priceLines) return;
+
+      const defProts = cur.defaults.proteins.map(p => (p.qty > 1 ? p.qty + '× ' : '') + p.n).join(', ');
+      let html = `<div style="display:flex;justify-content:space-between;"><span>${cur.name} (${defProts}, 2× ${cur.defaults.swallow})</span><span style="color:var(--text);">${fmt(cur.price)}</span></div>`;
+
+      Object.entries(selP).forEach(([n, q]) => {
+        const pt = cur.proteins.find(p => p.n === n);
+        html += `<div style="display:flex;justify-content:space-between;"><span>+ ${n}${q > 1 ? ' ×' + q : ''}</span><span style="color:var(--text);">+${fmt(pt.p * q)}</span></div>`;
+      });
+
+      if (qty > 1) html += `<div style="display:flex;justify-content:space-between;"><span>Quantity</span><span style="color:var(--text);">×${qty}</span></div>`;
+      priceLines.innerHTML = html;
+      if (itemTotal) itemTotal.textContent = fmt(calcTotal());
+      updateCartBar();
+    }
+
+    window.toggleProt = function(j) {
+      const pt = cur.proteins[j];
+      const n  = pt.n;
+      const q  = selP[n] || 0;
+      const next = (q + 1) % 4;
+      if (next === 0) delete selP[n]; else selP[n] = next;
+
+      const btn = document.getElementById('pt' + j);
+      btn.classList.toggle('on', !!selP[n]);
+      const qStr = selP[n] > 1 ? ` ×${selP[n]}` : '';
+      btn.innerHTML = `<p class="tog-name" style="font-size:13px;font-weight:600;margin:0 0 3px;color:${selP[n] ? 'var(--gold)' : 'var(--text)'};">${n}${qStr}</p><p style="font-size:11px;margin:0;color:var(--text-l);">+${fmt(pt.p * (selP[n] || 1))}</p>`;
+      updatePrice();
+    };
+
+    window.toggleSwallow = function(sw) {
+      selS = sw;
+      renderRight();
+    };
+
+    window.adjQty = function(d) {
+      qty = Math.max(1, qty + d);
+      document.getElementById('qty-display').textContent = qty;
+      updatePrice();
+    };
+
+    function renderCheckout() {
+      const defProts = cur.defaults.proteins.map(p => (p.qty > 1 ? p.qty + '× ' : '') + p.n).join(', ');
+      const extras = Object.entries(selP).map(([n, q]) => (q > 1 ? q + '× ' : '') + n);
+      const allProts = [defProts, ...extras].filter(Boolean).join(', ');
+      const sub    = calcTotal();
+      const total  = sub + NBF.DELIVERY_FEE;
+
+      document.getElementById('cart-summary').innerHTML = `
+        <div style="display:flex;align-items:center;gap:12px;">
+          <img src="${cur.img}" style="width:56px;height:56px;border-radius:10px;object-fit:cover;flex-shrink:0;" />
+          <div>
+            <p style="font-size:14px;font-weight:600;color:var(--text);margin:0 0 2px;">${cur.name}</p>
+            <p style="font-size:12px;color:var(--text-l);margin:0;">${allProts} · ${selS}</p>
+          </div>
+        </div>`;
+
+      document.getElementById('order-lines').innerHTML = `
+        <div style="display:flex;justify-content:space-between;"><span>Subtotal</span><span style="color:var(--text);">${fmt(sub)}</span></div>
+        <div style="display:flex;justify-content:space-between;"><span>Delivery fee</span><span style="color:var(--text);">${fmt(NBF.DELIVERY_FEE)}</span></div>`;
+      document.getElementById('order-total').textContent = fmt(total);
+    }
+
+    window.launchPaystack = function() {
+      const name  = document.getElementById('iname').value.trim();
+      const phone = document.getElementById('iphone').value.trim();
+      const addr  = document.getElementById('iaddr').value.trim();
+      if (!name || !phone || !addr) { alert('Please fill in all delivery details.'); return; }
+
+      const sub   = calcTotal();
+      const total = sub + NBF.DELIVERY_FEE;
+
+      const handler = PaystackPop.setup({
+        key:    NBF.PAYSTACK_KEY,
+        email:  phone.replace(/\D/g,'') + '@nabetafood.com',
+        amount: total * 100,
+        currency: 'NGN',
+        ref:    'NBF_' + Date.now() + '_' + Math.random().toString(36).slice(2,6).toUpperCase(),
+        metadata: { name, phone, address: addr },
+        callback: async function(transaction) {
+          const uuid     = generateUUID();
+          const orderId  = 'NBF-' + uuid.slice(0,8).toUpperCase();
+          const loyPhone = document.getElementById('iloyalty').value.trim() || phone;
+          const defProts = cur.defaults.proteins.map(p => (p.qty > 1 ? p.qty + '× ' : '') + p.n).join(', ');
+          const extras   = Object.entries(selP).map(([n, q]) => (q > 1 ? q + '× ' : '') + n);
+
+          try {
+            await supabasePost('orders', {
+              id: uuid, customer_name: name, customer_phone: phone,
+              customer_address: addr, paystack_reference: transaction.reference,
+              payment_status: 'paid', order_status: 'received',
+              items: [{ soup: cur.name, proteins: [defProts, ...extras], swallow: selS, qty }],
+              subtotal: sub, delivery_fee: NBF.DELIVERY_FEE, total
+            });
+          } catch(e) { console.error('Order save error:', e); }
+
+          // Loyalty
+          let pointsEarned = 0;
+          if (loyPhone) {
+            pointsEarned = await addLoyaltyPoints(loyPhone, name, total);
+          }
+
+          // Confirmation screen
+          const now = new Date();
+          const eta1 = new Date(now.getTime() + 15*60000);
+          const eta2 = new Date(now.getTime() + 30*60000);
+          const tf = d => d.toLocaleTimeString('en-NG', {hour:'2-digit',minute:'2-digit'});
+
+          document.getElementById('conf-name').textContent = 'Thank you, ' + name.split(' ')[0] + '!';
+          document.getElementById('conf-oid').textContent  = 'Order ID: ' + orderId;
+          document.getElementById('conf-eta').textContent  = 'Arrives between ' + tf(eta1) + ' – ' + tf(eta2);
+          document.getElementById('conf-addr').textContent = addr;
+          document.getElementById('conf-ref').textContent  = 'Ref: ' + transaction.reference;
+          document.getElementById('conf-total').textContent = fmt(total);
+          document.getElementById('conf-items').innerHTML  = `<p style="margin:0 0 4px;">${cur.name} &mdash; ${defProts}, ${selS}</p><p style="margin:0;color:var(--text-l);">Qty: ${qty} &nbsp;&middot;&nbsp; ${fmt(sub)}</p>`;
+
+          if (pointsEarned > 0) {
+            document.getElementById('conf-loyalty').style.display = 'block';
+            document.getElementById('conf-points-msg').textContent = 'You earned ' + pointsEarned + ' loyalty points on this order!';
+          }
+
+          cartBar.style.display = 'none';
+          goScreen(3);
+        },
+        onClose: function() { console.log('Payment closed.'); }
+      });
+      handler.openIframe();
+    };
+
+  })();
+  </script>
+</body></html>
