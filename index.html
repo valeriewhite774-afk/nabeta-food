@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>NabetaFood: Nigerian Soups Delivered Fresh in Warri</title>
+  <meta name="description" content="Order authentic Nigerian soups in Warri. Banga, Owo, Okro, Egusi, Fisherman and Vegetable soups cooked fresh per order and delivered in 15 to 30 minutes. Shop now at nabetafood.com">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://nabetafood.com">
+  <meta property="og:title" content="NabetaFood: Nigerian Soups Delivered Fresh in Warri">
+  <meta property="og:description" content="Order authentic Nigerian soups in Warri. Banga, Owo, Okro, Egusi, Fisherman and Vegetable soups cooked fresh per order and delivered in 15 to 30 minutes. Shop now at nabetafood.com">
+  <meta property="og:image" content="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790867160/nigerian_food_hero_mmbdck.jpg">
+  <meta property="og:url" content="https://nabetafood.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790867160/nigerian_food_hero_mmbdck.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790867160/nigerian_food_hero_mmbdck.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"NabetaFood","url":"https://nabetafood.com","servesCuisine":["Nigerian","Delta"],"address":{"@type":"PostalAddress","addressLocality":"Warri","addressRegion":"Delta State","addressCountry":"NG"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"1000","bestRating":"5"}}</script>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#0a0f0d;color:#f0ede8;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+button{font-family:inherit;cursor:pointer;}
+img{max-width:100%;height:auto;display:block;}
+
+/* Nav */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,15,13,0.95);
+  border-bottom:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(20px);height:64px;}
+.nav-i{max-width:1200px;margin:0 auto;padding:0 24px;height:64px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.nav-logo{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#f0ede8;}
+.nav-logo span{color:#c8a96e;}
+.nav-links{display:none;align-items:center;gap:4px;}
+.nav-links a{font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;
+  color:rgba(240,237,232,0.55);padding:6px 12px;border-radius:8px;transition:color 0.15s;}
+.nav-links a:hover,.nav-links a.active{color:#c8a96e;}
+.nav-acts{display:flex;align-items:center;gap:8px;}
+.nav-icon{width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;
+  color:rgba(240,237,232,0.6);font-size:18px;text-decoration:none;transition:all 0.15s;}
+.nav-icon:hover{background:rgba(255,255,255,0.08);color:#f0ede8;}
+.nav-cta{background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;
+  padding:8px 16px;border-radius:8px;text-decoration:none;display:none;white-space:nowrap;}
+.nav-cta:hover{background:#b8945a;}
+.ham{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;
+  width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.08);}
+.ham span{display:block;width:18px;height:1.5px;background:rgba(240,237,232,0.6);border-radius:2px;}
+#mob-nav{display:none;position:fixed;top:64px;left:0;right:0;z-index:999;
+  background:#111a16;border-bottom:1px solid rgba(255,255,255,0.06);
+  padding:12px 20px;flex-direction:column;gap:4px;}
+#mob-nav.open{display:flex;}
+#mob-nav a{font-size:14px;font-weight:600;color:rgba(240,237,232,0.7);
+  padding:12px 16px;border-radius:8px;display:block;}
+
+/* Layout */
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.pt{padding-top:64px;}
+.sec{padding:72px 0;}
+.sec-sm{padding:48px 0;}
+.bg-s{background:#111a16;}
+.bg-d{background:#0a0f0d;}
+
+/* Buttons */
+.btn-gold{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:#c8a96e;color:#0a0f0d;font-family:'Inter',sans-serif;
+  font-size:14px;font-weight:700;padding:14px 28px;border-radius:12px;
+  border:none;cursor:pointer;transition:background 0.15s,box-shadow 0.15s;text-decoration:none;white-space:nowrap;}
+.btn-gold:hover{background:#b8945a;box-shadow:0 4px 20px rgba(200,169,110,0.3);}
+.btn-gold:active{transform:scale(0.98);}
+.btn-gold-lg{font-size:16px;padding:16px 36px;border-radius:14px;}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;
+  background:transparent;color:#c8a96e;border:1.5px solid #c8a96e;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:700;
+  padding:13px 28px;border-radius:12px;text-decoration:none;transition:all 0.15s;}
+.btn-outline:hover{background:rgba(200,169,110,0.08);}
+.btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:700;
+  padding:14px 28px;border-radius:12px;text-decoration:none;}
+
+/* Cards */
+.card{background:#111a16;border:1px solid rgba(255,255,255,0.06);border-radius:18px;}
+
+/* Soup grid */
+.sgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+.scard{background:#111a16;border:1px solid rgba(255,255,255,0.06);border-radius:18px;
+  overflow:hidden;display:flex;flex-direction:column;text-decoration:none;
+  transition:transform 0.2s,border-color 0.2s,box-shadow 0.2s;}
+.scard:hover{transform:translateY(-3px);border-color:rgba(200,169,110,0.3);box-shadow:0 8px 32px rgba(0,0,0,0.4);}
+.scard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform 0.4s;}
+.scard:hover img{transform:scale(1.04);}
+.scard-body{padding:16px;flex:1;display:flex;flex-direction:column;gap:8px;}
+.badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  background:rgba(200,169,110,0.12);color:#c8a96e;padding:3px 10px;border-radius:100px;
+  border:1px solid rgba(200,169,110,0.2);}
+
+/* Order widget */
+#order-widget{background:#111a16;border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:24px;}
+.prot-btn{background:#0a0f0d;border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;
+  padding:12px 10px;cursor:pointer;text-align:left;transition:all 0.15s;width:100%;}
+.prot-btn:hover{border-color:rgba(200,169,110,0.4);}
+.prot-btn.on{background:rgba(200,169,110,0.08);border-color:#c8a96e;}
+.prot-btn.on .pn{color:#c8a96e!important;}
+.swal-btn{background:#0a0f0d;border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;
+  padding:12px;cursor:pointer;text-align:center;transition:all 0.15s;width:100%;
+  font-family:'Inter',sans-serif;font-size:13px;font-weight:600;color:rgba(240,237,232,0.7);}
+.swal-btn:hover{border-color:rgba(200,169,110,0.4);}
+.swal-btn.on{background:rgba(200,169,110,0.08);border-color:#c8a96e;color:#c8a96e;}
+.divider{height:1px;background:rgba(255,255,255,0.06);margin:16px 0;}
+.form-inp{background:#0a0f0d;border:1px solid rgba(255,255,255,0.1);border-radius:12px;
+  padding:13px 16px;font-family:'Inter',sans-serif;font-size:14px;color:#f0ede8;
+  outline:none;width:100%;transition:border-color 0.15s;}
+.form-inp:focus{border-color:#c8a96e;}
+.form-inp::placeholder{color:rgba(240,237,232,0.3);}
+
+/* Review cards */
+.rcard{background:#111a16;border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:20px;}
+
+/* FAQ */
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;
+  gap:12px;padding:16px 0;background:none;border:none;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:#f0ede8;text-align:left;}
+.faq-q:hover{color:#c8a96e;}
+.faq-a{display:none;padding:0 0 16px;font-size:13px;color:rgba(240,237,232,0.6);line-height:1.75;}
+
+/* Footer */
+footer{background:#111a16;border-top:1px solid rgba(255,255,255,0.06);padding:48px 0 24px;}
+
+/* Confirmation */
+.conf-icon{width:72px;height:72px;border-radius:50%;background:rgba(34,197,94,0.1);
+  margin:0 auto 20px;display:flex;align-items:center;justify-content:center;
+  font-size:36px;color:#22c55e;}
+
+@media(min-width:768px){
+  .sgrid{grid-template-columns:repeat(3,1fr);gap:20px;}
+  .nav-links{display:flex!important;}
+  .nav-cta{display:block!important;}
+  .ham{display:none!important;}
+}
+@media(min-width:900px){
+  .soup-layout{display:grid!important;grid-template-columns:1fr 420px;gap:48px;align-items:start;}
+  #order-widget{position:sticky;top:80px;}
+}
+</style>
+</head>
+<body>
+<nav id="nav"><div class="nav-i">
+  <button class="ham" onclick="var m=document.getElementById('mob-nav');m.classList.toggle('open');" style="border:none;">
+    <span></span><span></span><span></span>
+  </button>
+  <a href="/" class="nav-logo">NabetaFood<span>.</span></a>
+  <div class="nav-links"><a href="/" class="active">Home</a><a href="/menu.html" class="">Menu</a><a href="/about.html" class="">About</a><a href="/chef.html" class="">Chef</a><a href="/rewards.html" class="">Rewards</a></div>
+  <div class="nav-acts">
+    <a href="https://wa.me/2348104063360?text=Hello%20NabetaFood!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="nav-icon"><i class="ti ti-brand-whatsapp"></i></a>
+    <a href="/menu.html" class="nav-cta">Order Now</a>
+  </div>
+</div></nav>
+<div id="mob-nav"><a href="/">Home</a><a href="/menu.html">Menu</a><a href="/about.html">About</a><a href="/chef.html">Chef</a><a href="/rewards.html">Rewards</a></div>
+<script>document.addEventListener('click',function(e){if(!e.target.closest('#mob-nav')&&!e.target.closest('.ham'))document.getElementById('mob-nav').classList.remove('open');});</script>
+<div class="pt">
+
+  <!-- HERO -->
+  <section style="min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:80px 0 60px;">
+    <div style="position:absolute;inset:0;z-index:0;">
+      <img src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790867160/nigerian_food_hero_mmbdck.jpg" alt="Fresh Nigerian soups delivered in Warri" loading="eager" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,15,13,0.95) 45%,rgba(10,15,13,0.4) 100%);"></div>
+    </div>
+    <div class="wrap" style="position:relative;z-index:1;">
+      <div style="max-width:600px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(200,169,110,0.1);border:1px solid rgba(200,169,110,0.2);border-radius:100px;padding:6px 16px;margin-bottom:24px;">
+          <span style="color:#F59E0B;font-size:12px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span style="font-size:11px;font-weight:600;color:#c8a96e;">Rated 4.8/5 by 1,000+ Waferians</span>
+        </div>
+        <h1 style="font-family:'Playfair Display',serif;font-size:clamp(36px,5.5vw,68px);line-height:1.1;color:#f0ede8;margin:0 0 20px;font-weight:600;">Fresh Home-Style Nigerian Food.<br><span style="color:#c8a96e;">Delivered in 15 Minutes.</span></h1>
+        <p style="font-size:16px;color:rgba(240,237,232,0.65);line-height:1.75;margin:0 0 32px;max-width:480px;">Authentic Delta soups cooked per order by Chef Mercy Mone. 40 years of mastery. Delivered to your door in Warri.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px;">
+          <a href="/menu.html" class="btn-gold btn-gold-lg"><i class="ti ti-tools-kitchen-2" style="font-size:18px;"></i>Order Now<i class="ti ti-arrow-right" style="font-size:16px;"></i></a>
+          <a href="https://wa.me/2348104063360?text=Hello%20NabetaFood!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn-wa" style="padding:16px 24px;font-size:16px;border-radius:14px;"><i class="ti ti-brand-whatsapp" style="font-size:18px;"></i>Talk to Us</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:8px;"><i class="ti ti-clock" style="font-size:16px;color:#c8a96e;"></i><span style="font-size:12px;font-weight:600;color:rgba(240,237,232,0.55);">15 - 30 min delivery</span></div>
+          <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);"></div>
+          <div style="display:flex;align-items:center;gap:8px;"><i class="ti ti-shield-check" style="font-size:16px;color:#22c55e;"></i><span style="font-size:12px;font-weight:600;color:rgba(240,237,232,0.55);">Money back guarantee</span></div>
+          <div style="width:1px;height:16px;background:rgba(255,255,255,0.15);"></div>
+          <div style="display:flex;align-items:center;gap:8px;"><i class="ti ti-chef-hat" style="font-size:16px;color:#8B5CF6;"></i><span style="font-size:12px;font-weight:600;color:rgba(240,237,232,0.55);">Chef Mercy Mone, 40+ yrs</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="bg-s" style="border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div class="wrap">
+      <div style="display:flex;flex-wrap:wrap;gap:16px;padding:20px 0;">
+        <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:140px;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(200,169,110,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="ti ti-clock" style="font-size:18px;color:#c8a96e;"></i></div><div><p style="font-size:12px;font-weight:700;color:#f0ede8;margin:0;">15 - 30 Min Delivery</p><p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Always on time in Warri</p></div></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:140px;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(245,158,11,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="ti ti-star" style="font-size:18px;color:#F59E0B;"></i></div><div><p style="font-size:12px;font-weight:700;color:#f0ede8;margin:0;">1,000+ Orders Served</p><p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Trusted by Warri families</p></div></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:140px;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(34,197,94,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="ti ti-shield-check" style="font-size:18px;color:#22c55e;"></i></div><div><p style="font-size:12px;font-weight:700;color:#f0ede8;margin:0;">Money Back Guarantee</p><p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Enjoy it or full refund</p></div></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:1;min-width:140px;"><div style="width:36px;height:36px;border-radius:8px;background:rgba(139,92,246,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="ti ti-chef-hat" style="font-size:18px;color:#8B5CF6;"></i></div><div><p style="font-size:12px;font-weight:700;color:#f0ede8;margin:0;">Chef Mercy Mone</p><p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">40+ years of expertise</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SOUPS -->
+  <section class="sec bg-d">
+    <div class="wrap">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:16px;">
+        <div>
+          <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#c8a96e;margin:0 0 8px;">What Are We Serving Today?</p>
+          <h2 style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);color:#f0ede8;font-weight:500;margin:0 0 6px;">Pick Your Soup, We Handle The Rest</h2>
+          <p style="font-size:14px;color:rgba(240,237,232,0.45);margin:0;">6 Signature Soups. Fresh Daily. Your Choice Of Proteins And Swallow.</p>
+        </div>
+        <a href="/menu.html" class="btn-outline" style="white-space:nowrap;">View Full Menu <i class="ti ti-arrow-right" style="font-size:13px;"></i></a>
+      </div>
+      <div class="sgrid"><a href="/banga-soup.html" class="scard">
+  <img src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866559/banga_soup_dish_1780300824477_oujy5y.jpg" alt="Banga Soup delivery Warri" loading="lazy">
+  <div class="scard-body">
+    <span class="badge">Delta Classic</span>
+    <div>
+      <p style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#f0ede8;margin:0 0 4px;">Banga Soup</p>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="color:#F59E0B;font-size:12px;">&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-size:11px;color:rgba(240,237,232,0.4);">4.9 (312)</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(240,237,232,0.45);margin:0;line-height:1.5;flex:1;">Palm Fruit · Aromatic · Delta Spices</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;">
+      <span style="font-family:'DM Mono',monospace;font-size:16px;color:#c8a96e;">&#8358;4,999</span>
+      <span style="background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;">Order Now</span>
+    </div>
+  </div>
+</a>
+<a href="/fisherman-soup.html" class="scard">
+  <img src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866576/fisherman_soup_1780300845776_htbhmw.jpg" alt="Fisherman Soup delivery Warri" loading="lazy">
+  <div class="scard-body">
+    <span class="badge">Premium Catch</span>
+    <div>
+      <p style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#f0ede8;margin:0 0 4px;">Fisherman Soup</p>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="color:#F59E0B;font-size:12px;">&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-size:11px;color:rgba(240,237,232,0.4);">4.8 (184)</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(240,237,232,0.45);margin:0;line-height:1.5;flex:1;">Prawns · Crab · Coastal Delta</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;">
+      <span style="font-family:'DM Mono',monospace;font-size:16px;color:#c8a96e;">&#8358;5,500</span>
+      <span style="background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;">Order Now</span>
+    </div>
+  </div>
+</a>
+<a href="/owo-soup.html" class="scard">
+  <img src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866597/owo_soup_1780302250456_rfpibo.jpg" alt="Owo Soup delivery Warri" loading="lazy">
+  <div class="scard-body">
+    <span class="badge">Delta's Secret</span>
+    <div>
+      <p style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#f0ede8;margin:0 0 4px;">Owo Soup</p>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="color:#F59E0B;font-size:12px;">&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-size:11px;color:rgba(240,237,232,0.4);">4.9 (224)</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(240,237,232,0.45);margin:0;line-height:1.5;flex:1;">Thick · Premium · Rare</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;">
+      <span style="font-family:'DM Mono',monospace;font-size:16px;color:#c8a96e;">&#8358;5,999</span>
+      <span style="background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;">Order Now</span>
+    </div>
+  </div>
+</a>
+<a href="/egusi-soup.html" class="scard">
+  <img src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866616/egusi_soup_1780302266589_ageete.jpg" alt="Egusi Soup delivery Warri" loading="lazy">
+  <div class="scard-body">
+    <span class="badge">Most Popular</span>
+    <div>
+      <p style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#f0ede8;margin:0 0 4px;">Egusi Soup</p>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="color:#F59E0B;font-size:12px;">&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-size:11px;color:rgba(240,237,232,0.4);">4.8 (445)</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(240,237,232,0.45);margin:0;line-height:1.5;flex:1;">Rich · Hearty · Classic</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;">
+      <span style="font-family:'DM Mono',monospace;font-size:16px;color:#c8a96e;">&#8358;2,999</span>
+      <span style="background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;">Order Now</span>
+    </div>
+  </div>
+</a>
+<a href="/okro-soup.html" class="scard">
+  <img src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866625/okro_soup_1780302285781_wt5skn.jpg" alt="Okro Soup delivery Warri" loading="lazy">
+  <div class="scard-body">
+    <span class="badge">Customer Favourite</span>
+    <div>
+      <p style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#f0ede8;margin:0 0 4px;">Okro Soup</p>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="color:#F59E0B;font-size:12px;">&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-size:11px;color:rgba(240,237,232,0.4);">4.9 (267)</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(240,237,232,0.45);margin:0;line-height:1.5;flex:1;">Silky · Draw · Fresh</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;">
+      <span style="font-family:'DM Mono',monospace;font-size:16px;color:#c8a96e;">&#8358;4,999</span>
+      <span style="background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;">Order Now</span>
+    </div>
+  </div>
+</a>
+<a href="/vegetable-soup.html" class="scard">
+  <img src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866632/vegetable_soup_1780302300775_ixsdvd.jpg" alt="Vegetable Soup delivery Warri" loading="lazy">
+  <div class="scard-body">
+    <span class="badge">Freshly Picked</span>
+    <div>
+      <p style="font-family:'Playfair Display',serif;font-size:17px;font-weight:500;color:#f0ede8;margin:0 0 4px;">Vegetable Soup</p>
+      <div style="display:flex;align-items:center;gap:6px;">
+        <span style="color:#F59E0B;font-size:12px;">&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="font-size:11px;color:rgba(240,237,232,0.4);">4.8 (142)</span>
+      </div>
+    </div>
+    <p style="font-size:12px;color:rgba(240,237,232,0.45);margin:0;line-height:1.5;flex:1;">Greens · Nutritious · Aromatic</p>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:4px;">
+      <span style="font-family:'DM Mono',monospace;font-size:16px;color:#c8a96e;">&#8358;4,700</span>
+      <span style="background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;padding:7px 14px;border-radius:8px;">Order Now</span>
+    </div>
+  </div>
+</a></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec bg-s">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:40px;">
+        <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#c8a96e;margin:0 0 8px;">What Customers Are Saying</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);color:#f0ede8;font-weight:500;margin:0;">Real Reviews From Real Waferians</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;" class="rev-grid"><div class="rcard">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+    <span style="color:#F59E0B;font-size:13px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span style="font-size:9px;font-weight:700;color:#c8a96e;text-transform:uppercase;letter-spacing:1px;">Google Review</span>
+  </div>
+  <p style="font-size:13px;color:#f0ede8;margin:0 0 14px;line-height:1.65;font-style:italic;">"Delicious food and a swift delivery. The egusi and Semo was worth it. Bravo."</p>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div style="width:30px;height:30px;border-radius:50%;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c8a96e;flex-shrink:0;">EI</div>
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#f0ede8;margin:0;">Ezebunwa Izuwa</p>
+      <p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Warri</p>
+    </div>
+  </div>
+</div>
+<div class="rcard">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+    <span style="color:#F59E0B;font-size:13px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span style="font-size:9px;font-weight:700;color:#c8a96e;text-transform:uppercase;letter-spacing:1px;">Google Review</span>
+  </div>
+  <p style="font-size:13px;color:#f0ede8;margin:0 0 14px;line-height:1.65;font-style:italic;">"Delicious, tasty and very fast in delivery. I love NabetaFood and will keep on enjoying their foods."</p>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div style="width:30px;height:30px;border-radius:50%;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c8a96e;flex-shrink:0;">FB</div>
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#f0ede8;margin:0;">Felix Birinumugha</p>
+      <p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Warri</p>
+    </div>
+  </div>
+</div>
+<div class="rcard">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+    <span style="color:#F59E0B;font-size:13px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span style="font-size:9px;font-weight:700;color:#c8a96e;text-transform:uppercase;letter-spacing:1px;">Google Review</span>
+  </div>
+  <p style="font-size:13px;color:#f0ede8;margin:0 0 14px;line-height:1.65;font-style:italic;">"Super tasty and delicious. I have made NabetaFood my sure plug already."</p>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div style="width:30px;height:30px;border-radius:50%;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c8a96e;flex-shrink:0;">OU</div>
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#f0ede8;margin:0;">Ofegor Uruwarie</p>
+      <p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Warri</p>
+    </div>
+  </div>
+</div>
+<div class="rcard">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+    <span style="color:#F59E0B;font-size:13px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+    <span style="font-size:9px;font-weight:700;color:#c8a96e;text-transform:uppercase;letter-spacing:1px;">Google Review</span>
+  </div>
+  <p style="font-size:13px;color:#f0ede8;margin:0 0 14px;line-height:1.65;font-style:italic;">"Nice meal from NabetaFood. Very nourishable and satisfying."</p>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div style="width:30px;height:30px;border-radius:50%;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c8a96e;flex-shrink:0;">ED</div>
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#f0ede8;margin:0;">Emmanuel Dere</p>
+      <p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Warri</p>
+    </div>
+  </div>
+</div>
+<div class="rcard">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;">
+    <span style="color:#F59E0B;font-size:13px;letter-spacing:1px;">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+    <span style="font-size:9px;font-weight:700;color:#c8a96e;text-transform:uppercase;letter-spacing:1px;">Google Review</span>
+  </div>
+  <p style="font-size:13px;color:#f0ede8;margin:0 0 14px;line-height:1.65;font-style:italic;">"The food taste good, I really enjoyed it and I'm definitely going back for more orders."</p>
+  <div style="display:flex;align-items:center;gap:10px;">
+    <div style="width:30px;height:30px;border-radius:50%;background:rgba(200,169,110,0.12);border:1px solid rgba(200,169,110,0.2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#c8a96e;flex-shrink:0;">IJ</div>
+    <div>
+      <p style="font-size:12px;font-weight:600;color:#f0ede8;margin:0;">Irhivwoba E. Jerome</p>
+      <p style="font-size:11px;color:rgba(240,237,232,0.4);margin:0;">Warri</p>
+    </div>
+  </div>
+</div></div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="sec bg-d">
+    <div class="wrap">
+      <div style="text-align:center;margin-bottom:40px;">
+        <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#c8a96e;margin:0 0 8px;">Seamless Experience</p>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.5vw,40px);color:#f0ede8;font-weight:500;margin:0;">How NabetaFood Works</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr;gap:14px;" class="steps">
+        <div class="card" style="padding:28px;"><span style="font-family:DM Mono,monospace;font-size:12px;font-weight:500;color:#c8a96e;letter-spacing:1px;display:block;margin-bottom:14px;">01</span><h3 style="font-family:Playfair Display,serif;font-size:20px;color:#f0ede8;margin:0 0 8px;font-weight:500;">Choose Your Soup</h3><p style="font-size:14px;color:rgba(240,237,232,0.5);line-height:1.7;margin:0;">Browse our 6 signature soups. Click any soup to see details, reviews, and customisation options.</p></div><div class="card" style="padding:28px;"><span style="font-family:DM Mono,monospace;font-size:12px;font-weight:500;color:#c8a96e;letter-spacing:1px;display:block;margin-bottom:14px;">02</span><h3 style="font-family:Playfair Display,serif;font-size:20px;color:#f0ede8;margin:0 0 8px;font-weight:500;">Customise and Pay</h3><p style="font-size:14px;color:rgba(240,237,232,0.5);line-height:1.7;margin:0;">Add proteins, change your swallow, adjust quantity — then enter your delivery details and pay with Paystack. All on one page.</p></div><div class="card" style="padding:28px;"><span style="font-family:DM Mono,monospace;font-size:12px;font-weight:500;color:#c8a96e;letter-spacing:1px;display:block;margin-bottom:14px;">03</span><h3 style="font-family:Playfair Display,serif;font-size:20px;color:#f0ede8;margin:0 0 8px;font-weight:500;">Delivered in 15 - 30 Mins</h3><p style="font-size:14px;color:rgba(240,237,232,0.5);line-height:1.7;margin:0;">Hot, freshly cooked soup arrives at your door. Still steaming when it lands. Track with your Order ID.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP BANNER -->
+  <section class="sec-sm bg-s">
+    <div class="wrap">
+      <div style="background:linear-gradient(135deg,#0d2a22 0%,#1a3d2e 100%);border:1px solid rgba(37,211,102,0.15);border-radius:24px;padding:40px;">
+        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(37,211,102,0.1);color:#69f098;padding:4px 14px;border-radius:100px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px;"><i class="ti ti-brand-whatsapp" style="font-size:13px;"></i>Direct Kitchen Concierge</div>
+        <h2 style="font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,32px);color:white;font-weight:500;margin:0 0 10px;">Bulk Orders, Catering, or Custom Requests?</h2>
+        <p style="font-size:14px;color:rgba(255,255,255,0.55);margin:0 0 20px;max-width:520px;line-height:1.75;">Our kitchen support team is active on WhatsApp for customised dietary instructions, party catering, and large group orders across Warri.</p>
+        <a href="https://wa.me/2348104063360?text=Hello%20NabetaFood!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn-wa"><i class="ti ti-brand-whatsapp" style="font-size:16px;"></i>Chat on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+<style>@media(min-width:768px){.rev-grid{grid-template-columns:repeat(3,1fr)!important}.steps{grid-template-columns:repeat(3,1fr)!important}}</style>
+<footer>
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:32px;">
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;color:#f0ede8;margin-bottom:8px;">NabetaFood<span style="color:#c8a96e;">.</span></div>
+        <p style="font-size:13px;color:rgba(240,237,232,0.4);line-height:1.65;max-width:220px;margin:0 0 16px;">Hot food, fast delivery, no wahala. Delta soups cooked fresh per order in Warri.</p>
+        <a href="https://wa.me/2348104063360?text=Hello%20NabetaFood!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" class="btn-wa" style="font-size:12px;padding:8px 16px;border-radius:8px;"><i class="ti ti-brand-whatsapp" style="font-size:14px;"></i>WhatsApp Us</a>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;margin-bottom:12px;">Our Soups</div>
+        <a href="/banga-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.4)'">Banga Soup</a><a href="/fisherman-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.4)'">Fisherman Soup</a><a href="/owo-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.4)'">Owo Soup</a><a href="/egusi-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.4)'">Egusi Soup</a><a href="/okro-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.4)'">Okro Soup</a><a href="/vegetable-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.4)'">Vegetable Soup</a>
+        <div style="margin-top:16px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;margin-bottom:10px;">More</div>
+        <a href="/about.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;">About Us</a>
+        <a href="/rewards.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;">Rewards</a>
+        <a href="/track.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.4);margin-bottom:8px;text-decoration:none;">Track Order</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;">
+      <span style="font-size:11px;color:rgba(240,237,232,0.25);">&#169; 2026 NabetaFood. All rights reserved.</span>
+      <span style="font-size:11px;color:rgba(240,237,232,0.25);">Warri, Delta State, Nigeria</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>

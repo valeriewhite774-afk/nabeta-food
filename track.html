@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Track Your Order | NabetaFood</title>
+  <meta name="description" content="Track your NabetaFood order in real time. Enter your Order ID to see your delivery status.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://nabetafood.com/track.html">
+  <meta property="og:title" content="Track Your Order | NabetaFood">
+  <meta property="og:description" content="Track your NabetaFood order in real time. Enter your Order ID to see your delivery status.">
+  <meta property="og:image" content="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790867160/nigerian_food_hero_mmbdck.jpg">
+  <meta property="og:url" content="https://nabetafood.com/track.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790867160/nigerian_food_hero_mmbdck.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+  <link rel="preload" as="image" href="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790867160/nigerian_food_hero_mmbdck.jpg">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="/css/nabetafood.css">
+  
+</head>
+<body>
+
+<nav style="position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,15,13,0.95);border-bottom:1px solid rgba(255,255,255,0.06);backdrop-filter:blur(20px);height:64px;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;height:64px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+    <button onclick="document.getElementById('mob-nav').style.display=document.getElementById('mob-nav').style.display==='flex'?'none':'flex'" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;width:38px;height:38px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;flex-shrink:0;" class="ham-btn">
+      <span style="display:block;width:18px;height:1.5px;background:rgba(240,237,232,0.6);border-radius:2px;"></span>
+      <span style="display:block;width:18px;height:1.5px;background:rgba(240,237,232,0.6);border-radius:2px;"></span>
+      <span style="display:block;width:18px;height:1.5px;background:rgba(240,237,232,0.6);border-radius:2px;"></span>
+    </button>
+    <a href="/" style="font-family:'Playfair Display',serif;font-size:20px;font-weight:600;color:#f0ede8;text-decoration:none;white-space:nowrap;">NabetaFood<span style="color:#c8a96e;">.</span></a>
+    <div style="display:none;align-items:center;gap:4px;" class="desk-nav" id="desk-links"><a href="/" style="font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:rgba(240,237,232,0.6);padding:6px 12px;border-radius:8px;text-decoration:none;transition:color 0.15s;">Home</a><a href="/menu.html" style="font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:rgba(240,237,232,0.6);padding:6px 12px;border-radius:8px;text-decoration:none;transition:color 0.15s;">Menu</a><a href="/about.html" style="font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:rgba(240,237,232,0.6);padding:6px 12px;border-radius:8px;text-decoration:none;transition:color 0.15s;">About</a><a href="/chef.html" style="font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:rgba(240,237,232,0.6);padding:6px 12px;border-radius:8px;text-decoration:none;transition:color 0.15s;">Our Chef</a><a href="/rewards.html" style="font-size:12px;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;color:rgba(240,237,232,0.6);padding:6px 12px;border-radius:8px;text-decoration:none;transition:color 0.15s;">Rewards</a></div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <a href="https://wa.me/2348104063360?text=Hello%20NabetaFood!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" style="width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(240,237,232,0.6);font-size:18px;text-decoration:none;">
+        <i class="ti ti-brand-whatsapp"></i>
+      </a>
+      <a href="/order.html" style="width:38px;height:38px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:rgba(240,237,232,0.6);font-size:18px;text-decoration:none;position:relative;" id="nav-cart">
+        <i class="ti ti-shopping-bag"></i>
+        <span id="cart-badge" style="display:none;position:absolute;top:-4px;right:-4px;background:#c8a96e;color:#0a0f0d;border-radius:50%;width:16px;height:16px;font-size:9px;font-weight:800;align-items:center;justify-content:center;"></span>
+      </a>
+      <a href="/menu.html" style="background:#c8a96e;color:#0a0f0d;font-size:12px;font-weight:700;padding:8px 16px;border-radius:10px;text-decoration:none;white-space:nowrap;display:none;" class="nav-order-btn">Order Now</a>
+    </div>
+  </div>
+</nav>
+<div id="mob-nav" style="display:none;position:fixed;top:64px;left:0;right:0;z-index:999;background:#111a16;border-bottom:1px solid rgba(255,255,255,0.06);padding:12px 20px;flex-direction:column;gap:4px;">
+  <a href="/" style="display:block;font-size:14px;font-weight:600;color:rgba(240,237,232,0.8);padding:12px 16px;border-radius:8px;text-decoration:none;">Home</a><a href="/menu.html" style="display:block;font-size:14px;font-weight:600;color:rgba(240,237,232,0.8);padding:12px 16px;border-radius:8px;text-decoration:none;">Menu</a><a href="/about.html" style="display:block;font-size:14px;font-weight:600;color:rgba(240,237,232,0.8);padding:12px 16px;border-radius:8px;text-decoration:none;">About</a><a href="/chef.html" style="display:block;font-size:14px;font-weight:600;color:rgba(240,237,232,0.8);padding:12px 16px;border-radius:8px;text-decoration:none;">Our Chef</a><a href="/rewards.html" style="display:block;font-size:14px;font-weight:600;color:rgba(240,237,232,0.8);padding:12px 16px;border-radius:8px;text-decoration:none;">Rewards</a>
+</div>
+<style>
+@media(min-width:900px){.ham-btn{display:none!important}.desk-nav{display:flex!important}.nav-order-btn{display:block!important}}
+</style>
+<script>
+document.addEventListener('click',function(e){
+  const mob=document.getElementById('mob-nav');
+  if(mob&&!mob.contains(e.target)&&!e.target.closest('.ham-btn'))mob.style.display='none';
+});
+(function(){
+  try{const c=JSON.parse(localStorage.getItem('nbf_cart')||'[]');const n=c.reduce((s,i)=>s+(i.qty||1),0);if(n>0){const b=document.getElementById('cart-badge');if(b){b.textContent=n;b.style.display='flex';}}}catch(e){}
+})();
+</script>
+<div style="padding-top:64px;">
+
+  <section style="padding:80px 0;background:#0a0f0d;">
+    <div style="max-width:600px;margin:0 auto;padding:0 24px;">
+      <p style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:3px;color:#c8a96e;margin:0 0 8px;">Order Tracking</p>
+      <h1 style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);color:#f0ede8;font-weight:600;margin:0 0 12px;">Track Your Order</h1>
+      <p style="font-size:15px;color:rgba(240,237,232,0.55);margin:0 0 36px;">Enter your Order ID from your confirmation screen to see your delivery status.</p>
+      <div style="background:#111a16;border:1px solid rgba(255,255,255,0.06);border-radius:20px;padding:24px;margin-bottom:24px;">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <input id="track-in" type="text" placeholder="e.g. NBF-A1B2C3D4" style="flex:1;background:#0a0f0d;border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:12px 16px;font-family:'DM Mono',monospace;font-size:14px;color:#f0ede8;outline:none;">
+          <button onclick="doTrack()" style="background:#c8a96e;color:#0a0f0d;font-size:13px;font-weight:700;padding:12px 24px;border-radius:12px;border:none;cursor:pointer;">Track</button>
+        </div>
+        <div id="track-result" style="margin-top:20px;display:none;"></div>
+      </div>
+      <p style="font-size:13px;color:rgba(240,237,232,0.4);text-align:center;">Need help? <a href="https://wa.me/2348104063360?text=Hello%20NabetaFood!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" style="color:#c8a96e;">WhatsApp us</a></p>
+    </div>
+  </section>
+  <script>
+  const SUPA_URL='https://ldckmvocwddkmfpwhjny.supabase.co';
+  const SUPA_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxkY2ttdm9jd2Rka21mcHdoam55Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY0NjY5OTMsImV4cCI6MjA2MjA0Mjk5M30.L8kd9j0EaKirAQCrDMkFl0LFmSGJqRF7kJNqMiN2Yrw';
+  const STATUS={'received':{'icon':'ti-circle-check','color':'#22c55e','label':'Order Received'},'cooking':{'icon':'ti-flame','color':'#c8a96e','label':'Being Cooked'},'out for delivery':{'icon':'ti-motorbike','color':'#8B5CF6','label':'Out for Delivery'},'delivered':{'icon':'ti-home-check','color':'#22c55e','label':'Delivered'}};
+  async function doTrack(){
+    const input=document.getElementById('track-in').value.trim();
+    const res=document.getElementById('track-result');
+    if(!input)return;
+    res.style.display='block';
+    res.innerHTML='<p style="color:rgba(240,237,232,0.5);font-size:13px;">Looking up your order...</p>';
+    try{
+      const clean=input.replace(/^NBF-/i,'').toLowerCase();
+      const r=await fetch(SUPA_URL+'/rest/v1/orders?id=ilike.'+clean+'%25&select=*&limit=1',{headers:{'apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY}});
+      const d=await r.json();
+      if(d&&d[0]){
+        const o=d[0];const st=o.order_status||'received';const cfg=STATUS[st.toLowerCase()]||STATUS.received;
+        res.innerHTML='<div style="background:rgba(200,169,110,0.06);border:1px solid rgba(200,169,110,0.2);border-radius:14px;padding:20px;"><div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;"><i class="ti '+cfg.icon+'" style="font-size:28px;color:'+cfg.color+';"></i><div><p style="font-size:15px;font-weight:700;color:#f0ede8;margin:0;">'+cfg.label+'</p><p style="font-size:12px;color:rgba(240,237,232,0.4);margin:0;font-family:DM Mono,monospace;">'+input.toUpperCase()+'</p></div></div>'+(o.customer_address?'<p style="font-size:13px;color:rgba(240,237,232,0.55);margin:0 0 14px;">'+o.customer_address+'</p>':'')+'<div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:14px;display:flex;justify-content:space-between;"><span style="font-size:12px;color:rgba(240,237,232,0.4);">Total Paid</span><span style="font-family:DM Mono,monospace;font-size:14px;color:#c8a96e;">&#8358;'+Number(o.total).toLocaleString('en-NG')+'</span></div></div>';
+      }else{res.innerHTML='<p style="font-size:13px;color:rgba(240,237,232,0.5);">Order not found. Please check your Order ID and try again.</p>';}
+    }catch(e){res.innerHTML='<p style="font-size:13px;color:rgba(240,237,232,0.5);">Error. Please try again.</p>';}
+  }
+  </script>
+
+<footer style="background:#111a16;border-top:1px solid rgba(255,255,255,0.06);padding:48px 0 24px;">
+  <div style="max-width:1200px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:36px;">
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:20px;color:#f0ede8;margin-bottom:8px;">NabetaFood<span style="color:#c8a96e;">.</span></div>
+        <p style="font-size:13px;color:rgba(240,237,232,0.45);line-height:1.65;max-width:220px;margin:0 0 16px;">Hot food, fast delivery, no wahala. Delta soups cooked fresh per order in Warri.</p>
+        <a href="https://wa.me/2348104063360?text=Hello%20NabetaFood!%20I%20would%20like%20to%20place%20an%20order." target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;background:#25D366;color:white;font-size:12px;font-weight:700;padding:8px 16px;border-radius:8px;text-decoration:none;">
+          <i class="ti ti-brand-whatsapp" style="font-size:14px;"></i> WhatsApp Us
+        </a>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#c8a96e;margin-bottom:12px;">Our Soups</div>
+        <a href="/banga-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.45);margin-bottom:8px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.45)'">Banga Soup</a><a href="/fisherman-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.45);margin-bottom:8px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.45)'">Fisherman Soup</a><a href="/owo-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.45);margin-bottom:8px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.45)'">Owo Soup</a><a href="/egusi-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.45);margin-bottom:8px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.45)'">Egusi Soup</a><a href="/okro-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.45);margin-bottom:8px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.45)'">Okro Soup</a><a href="/vegetable-soup.html" style="display:block;font-size:13px;color:rgba(240,237,232,0.45);margin-bottom:8px;text-decoration:none;transition:color 0.15s;" onmouseover="this.style.color='#c8a96e'" onmouseout="this.style.color='rgba(240,237,232,0.45)'">Vegetable Soup</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.06);padding-top:20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;">
+      <span style="font-size:11px;color:rgba(240,237,232,0.3);">&#169; 2026 NabetaFood. All rights reserved.</span>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <a href="/about.html" style="font-size:11px;color:rgba(240,237,232,0.3);text-decoration:none;">About</a>
+        <a href="/about.html#delivery" style="font-size:11px;color:rgba(240,237,232,0.3);text-decoration:none;">Delivery Policy</a>
+        <a href="/track.html" style="font-size:11px;color:rgba(240,237,232,0.3);text-decoration:none;">Track Order</a>
+        <a href="/rewards.html" style="font-size:11px;color:rgba(240,237,232,0.3);text-decoration:none;">Rewards</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+</body>
+</html>
