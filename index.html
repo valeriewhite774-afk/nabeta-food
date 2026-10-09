@@ -545,37 +545,68 @@
 .soup-card {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: var(--r-lg);
+  border-radius: var(--r-xl);
   overflow: hidden;
-  transition: transform .2s, box-shadow .2s;
+  transition: transform .2s, box-shadow .25s;
+  display: flex;
+  flex-direction: column;
 }
 .soup-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
 .soup-card-inner {
-  display: block;
-  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
-.soup-card-emoji {
-  font-size: 48px;
-  margin-bottom: 16px;
-  display: block;
+.soup-card-img-wrap {
+  position: relative;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  background: var(--sage-lt);
+  flex-shrink: 0;
+}
+.soup-card-img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.soup-card:hover .soup-card-img { transform: scale(1.04); }
+.soup-card-tag {
+  position: absolute; top: 14px; left: 14px;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: .09em; text-transform: uppercase;
+  color: var(--forest);
+  background: rgba(253,250,243,.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(138,173,133,.4);
+}
+.soup-card-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .soup-card-name {
   font-family: var(--font-display);
   font-size: 20px;
   font-weight: 700;
+  color: var(--ink-2);
   margin-bottom: 6px;
 }
 .soup-card-tagline {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--muted);
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.55;
+  flex: 1;
+  margin-bottom: 18px;
 }
 .soup-card-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 16px;
+  padding-top: 14px;
   border-top: 1px solid var(--border);
 }
 .soup-card-price {
@@ -585,12 +616,18 @@
   font-variant-numeric: tabular-nums;
 }
 .soup-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
-  font-weight: 700;
-  color: var(--gold);
-  letter-spacing: .02em;
+  font-weight: 600;
+  background: var(--forest);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: var(--r-sm);
+  transition: background .15s;
 }
-.soup-card:hover .soup-card-cta { text-decoration: underline; }
+.soup-card:hover .soup-card-cta { background: var(--forest-2); }
 
 /* Reviews */
 .reviews-bg { background: var(--white); padding: 80px 0; }
@@ -867,78 +904,96 @@
     
     <article class="soup-card" id="banga-soup">
       <a href="/banga-soup.html" class="soup-card-inner">
-        <div class="soup-card-emoji">🫙</div>
+        <div class="soup-card-img-wrap">
+          <img class="soup-card-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866559/banga_soup_dish_1780300824477_oujy5y.jpg" alt="Banga Soup" loading="lazy" width="480" height="320">
+          <span class="soup-card-tag">Classic</span>
+        </div>
         <div class="soup-card-body">
           <h3 class="soup-card-name">Banga Soup</h3>
           <p class="soup-card-tagline">Rich palm fruit soup with river fish & periwinkle</p>
           <div class="soup-card-footer">
             <span class="soup-card-price">₦4,999</span>
-            <span class="soup-card-cta">Order Now →</span>
+            <span class="soup-card-cta">Order Now</span>
           </div>
         </div>
       </a>
     </article>
     <article class="soup-card" id="fisherman-soup">
       <a href="/fisherman-soup.html" class="soup-card-inner">
-        <div class="soup-card-emoji">🦐</div>
+        <div class="soup-card-img-wrap">
+          <img class="soup-card-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866576/fisherman_soup_1780300845776_htbhmw.jpg" alt="Fisherman Soup" loading="lazy" width="480" height="320">
+          <span class="soup-card-tag">Classic</span>
+        </div>
         <div class="soup-card-body">
           <h3 class="soup-card-name">Fisherman Soup</h3>
           <p class="soup-card-tagline">Fresh seafood medley in a spiced Delta broth</p>
           <div class="soup-card-footer">
             <span class="soup-card-price">₦4,999</span>
-            <span class="soup-card-cta">Order Now →</span>
+            <span class="soup-card-cta">Order Now</span>
           </div>
         </div>
       </a>
     </article>
     <article class="soup-card" id="owo-soup">
       <a href="/owo-soup.html" class="soup-card-inner">
-        <div class="soup-card-emoji">🌿</div>
+        <div class="soup-card-img-wrap">
+          <img class="soup-card-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866597/owo_soup_1780302250456_rfpibo.jpg" alt="Owo Soup" loading="lazy" width="480" height="320">
+          <span class="soup-card-tag">Classic</span>
+        </div>
         <div class="soup-card-body">
           <h3 class="soup-card-name">Owo Soup</h3>
           <p class="soup-card-tagline">Authentic Urhobo owo: bitter leaf and palm nut</p>
           <div class="soup-card-footer">
             <span class="soup-card-price">₦4,999</span>
-            <span class="soup-card-cta">Order Now →</span>
+            <span class="soup-card-cta">Order Now</span>
           </div>
         </div>
       </a>
     </article>
     <article class="soup-card" id="egusi-soup">
       <a href="/egusi-soup.html" class="soup-card-inner">
-        <div class="soup-card-emoji">🥘</div>
+        <div class="soup-card-img-wrap">
+          <img class="soup-card-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866616/egusi_soup_1780302266589_ageete.jpg" alt="Egusi Soup" loading="lazy" width="480" height="320">
+          <span class="soup-card-tag">Classic</span>
+        </div>
         <div class="soup-card-body">
           <h3 class="soup-card-name">Egusi Soup</h3>
           <p class="soup-card-tagline">Ground melon seed soup with assorted meat & stockfish</p>
           <div class="soup-card-footer">
             <span class="soup-card-price">₦3,999</span>
-            <span class="soup-card-cta">Order Now →</span>
+            <span class="soup-card-cta">Order Now</span>
           </div>
         </div>
       </a>
     </article>
     <article class="soup-card" id="okro-soup">
       <a href="/okro-soup.html" class="soup-card-inner">
-        <div class="soup-card-emoji">🫛</div>
+        <div class="soup-card-img-wrap">
+          <img class="soup-card-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866625/okro_soup_1780302285781_wt5skn.jpg" alt="Okro Soup" loading="lazy" width="480" height="320">
+          <span class="soup-card-tag">Classic</span>
+        </div>
         <div class="soup-card-body">
           <h3 class="soup-card-name">Okro Soup</h3>
           <p class="soup-card-tagline">Silky draw soup with periwinkle, shrimp & assorted meat</p>
           <div class="soup-card-footer">
             <span class="soup-card-price">₦4,999</span>
-            <span class="soup-card-cta">Order Now →</span>
+            <span class="soup-card-cta">Order Now</span>
           </div>
         </div>
       </a>
     </article>
     <article class="soup-card" id="vegetable-soup">
       <a href="/vegetable-soup.html" class="soup-card-inner">
-        <div class="soup-card-emoji">🥬</div>
+        <div class="soup-card-img-wrap">
+          <img class="soup-card-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866632/vegetable_soup_1780302300775_ixsdvd.jpg" alt="Vegetable Soup" loading="lazy" width="480" height="320">
+          <span class="soup-card-tag">Classic</span>
+        </div>
         <div class="soup-card-body">
           <h3 class="soup-card-name">Vegetable Soup</h3>
           <p class="soup-card-tagline">Mixed leafy greens with assorted protein</p>
           <div class="soup-card-footer">
             <span class="soup-card-price">₦4,999</span>
-            <span class="soup-card-cta">Order Now →</span>
+            <span class="soup-card-cta">Order Now</span>
           </div>
         </div>
       </a>
