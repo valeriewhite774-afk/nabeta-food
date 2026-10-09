@@ -269,6 +269,8 @@
     .hamburger { display: flex; order: -1; }
     .logo { position: absolute; left: 50%; transform: translateX(-50%); }
     .nav-wa-btn { display: flex; }
+    .nav-wa-label { display: none; }
+    .nav-wa-btn { width: 36px; height: 36px; padding: 0; justify-content: center; border-radius: 50%; }
   }
 
 
@@ -390,7 +392,8 @@
   /* Soup hero image */
   .soup-hero-img {
     width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 16/9;
+    max-height: 340px;
     object-fit: cover;
     border-radius: var(--r-xl);
     display: block;
@@ -470,7 +473,22 @@
   .related-section { padding: 64px 24px; background: var(--white); }
   .related-inner { max-width: 1200px; margin: 0 auto; }
   .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 28px; }
-  .related-card {
+  .related-img-wrap {
+    aspect-ratio: 3/2;
+    overflow: hidden;
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+    background: var(--sage-lt);
+  }}
+  .related-img {{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+  }}
+  .related-card:hover .related-img {{ transform: scale(1.05); }}
+  .related-body {{
+    padding: 14px 16px 16px;
+  }}
+  .related-card {{
     display: block;
     background: var(--cream);
     border: 1px solid var(--border);
@@ -479,9 +497,8 @@
     transition: transform .2s, box-shadow .2s;
   }
   .related-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); }
-  .related-emoji { font-size: 36px; margin-bottom: 10px; display: block; }
-  .related-name { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 6px; }
-  .related-cta { font-size: 13px; font-weight: 700; color: var(--gold); }
+  .related-name { font-family: var(--font-display); font-size: 17px; font-weight: 700; margin-bottom: 6px; color: var(--ink-2); }}
+  .related-cta {{ font-size: 13px; font-weight: 600; color: var(--forest); }}
 
   /* Responsive */
   @media (max-width: 900px) {
@@ -1308,19 +1325,31 @@
     <h2 style="font-family:var(--font-display);font-size:28px;font-weight:700;margin-bottom:4px;">More Fresh Soups</h2>
     <div class="related-grid">
     <a href="/banga-soup.html" class="related-card">
-      <span class="related-emoji">🫙</span>
-      <div class="related-name">Banga Soup</div>
-      <div class="related-cta">Order Now →</div>
+      <div class="related-img-wrap">
+        <img class="related-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866559/banga_soup_dish_1780300824477_oujy5y.jpg" alt="Banga Soup" loading="lazy" width="320" height="213">
+      </div>
+      <div class="related-body">
+        <div class="related-name">Banga Soup</div>
+        <div class="related-cta">Order Now</div>
+      </div>
     </a>
     <a href="/okro-soup.html" class="related-card">
-      <span class="related-emoji">🫛</span>
-      <div class="related-name">Okro Soup</div>
-      <div class="related-cta">Order Now →</div>
+      <div class="related-img-wrap">
+        <img class="related-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866625/okro_soup_1780302285781_wt5skn.jpg" alt="Okro Soup" loading="lazy" width="320" height="213">
+      </div>
+      <div class="related-body">
+        <div class="related-name">Okro Soup</div>
+        <div class="related-cta">Order Now</div>
+      </div>
     </a>
     <a href="/vegetable-soup.html" class="related-card">
-      <span class="related-emoji">🥬</span>
-      <div class="related-name">Vegetable Soup</div>
-      <div class="related-cta">Order Now →</div>
+      <div class="related-img-wrap">
+        <img class="related-img" src="https://res.cloudinary.com/dfrvptn1p/image/upload/v1790866632/vegetable_soup_1780302300775_ixsdvd.jpg" alt="Vegetable Soup" loading="lazy" width="320" height="213">
+      </div>
+      <div class="related-body">
+        <div class="related-name">Vegetable Soup</div>
+        <div class="related-cta">Order Now</div>
+      </div>
     </a></div>
   </div>
 </section>
