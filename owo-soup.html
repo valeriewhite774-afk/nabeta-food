@@ -1625,6 +1625,29 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         document.getElementById('confirm-ref').textContent = response.reference;
         const eta = Math.floor(Math.random() * 16) + 15;
         document.getElementById('confirm-eta').textContent = eta + ' min';
+
+        // GA4 purchase event
+        const orderTotal = calcTotal() / 100;
+        gtag('event', 'purchase', {
+          transaction_id: response.reference,
+          value: orderTotal,
+          currency: 'NGN',
+          items: [{
+            item_id: SOUP_NAME.toLowerCase().replace(/\s+/g, '-'),
+            item_name: SOUP_NAME,
+            quantity: qty,
+            price: orderTotal / qty
+          }]
+        });
+
+        // TikTok purchase event
+        ttq.track('PlaceAnOrder', {
+          content_id: SOUP_NAME.toLowerCase().replace(/\s+/g, '-'),
+          content_name: SOUP_NAME,
+          quantity: qty,
+          value: orderTotal,
+          currency: 'NGN'
+        });
       }
     });
     handler.openIframe();
