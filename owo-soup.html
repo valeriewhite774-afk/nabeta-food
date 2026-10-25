@@ -1255,6 +1255,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <input class="form-input" id="chk-phone" type="tel" placeholder="08012345678" autocomplete="tel">
       </div>
       <div class="form-group">
+        <label class="form-label" for="chk-email">Email Address <span style="font-size:11px;color:var(--muted)">(for your receipt)</span></label>
+        <input class="form-input" id="chk-email" type="email" placeholder="yourname@email.com" autocomplete="email">
+      </div>
+      <div class="form-group">
         <label class="form-label" for="chk-address">Delivery Address</label>
         <input class="form-input" id="chk-address" type="text" placeholder="Street, Area, Warri" autocomplete="street-address">
       </div>
@@ -1584,6 +1588,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   document.getElementById('btn-pay').addEventListener('click', () => {
     const custName = document.getElementById('chk-name').value.trim();
     const phone = document.getElementById('chk-phone').value.trim();
+    const email = document.getElementById('chk-email').value.trim();
     const address = document.getElementById('chk-address').value.trim();
 
     if (!custName || !phone || !address) {
@@ -1601,7 +1606,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     const handler = PaystackPop.setup({
       key: PAYSTACK_KEY,
-      email: phoneClean.replace(/\D/g, '') + '@nabetafood.com',
+      email: (document.getElementById('chk-email').value.trim() || phoneClean.replace(/\D/g, '') + '@nabetafood.com'),
       amount: amount,
       currency: 'NGN',
       ref: ref,
