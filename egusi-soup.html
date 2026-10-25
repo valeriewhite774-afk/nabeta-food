@@ -1176,7 +1176,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <!-- Quantity -->
       <div class="qty-row">
         <button class="qty-btn" id="qty-minus" type="button">−</button>
-        <span class="qty-display" id="qty-num">1</span>
+        <span class="qty-display" id="qty-num">1 plate</span>
         <button class="qty-btn" id="qty-plus" type="button">+</button>
         <span style="font-size:13px;color:var(--muted);margin-left:4px">serving(s)</span>
       </div>
@@ -1543,10 +1543,10 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
   // Quantity
   document.getElementById('qty-minus').addEventListener('click', () => {
-    if (qty > 1) { qty--; document.getElementById('qty-num').textContent = qty; updateTotal(); }
+    if (qty > 1) { qty--; document.getElementById('qty-num').textContent = qty + (qty === 1 ? ' plate' : ' plates'); updateTotal(); }
   });
   document.getElementById('qty-plus').addEventListener('click', () => {
-    if (qty < 10) { qty++; document.getElementById('qty-num').textContent = qty; updateTotal(); }
+    if (qty < 10) { qty++; document.getElementById('qty-num').textContent = qty + (qty === 1 ? ' plate' : ' plates'); updateTotal(); }
   });
 
   // Review carousel (manual only)
