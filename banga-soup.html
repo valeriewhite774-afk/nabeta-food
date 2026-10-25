@@ -1591,8 +1591,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     const email = document.getElementById('chk-email').value.trim();
     const address = document.getElementById('chk-address').value.trim();
 
-    if (!custName || !phone || !address) {
-      alert('Please fill in your name, phone number, and delivery address.');
+    if (!custName || !phone || !email || !address) {
+      alert('Please fill in your name, phone number, email address, and delivery address.');
       return;
     }
     const phoneClean = phone.replace(/\s+/g, '');
