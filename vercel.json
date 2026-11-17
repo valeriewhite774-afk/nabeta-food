@@ -5,6 +5,7 @@
   "outputDirectory": ".",
   "framework": null,
   "rewrites": [
+    {"source": "/thank-you", "destination": "/thank-you.html"},
     {"source": "/", "destination": "/index.html"},
     {"source": "/menu", "destination": "/menu.html"},
     {"source": "/about", "destination": "/about.html"},
