@@ -1549,11 +1549,12 @@
       },
       onClose: function() {},
       callback: function(response) {
-        document.getElementById('screen-b').classList.remove('active');
-        document.getElementById('screen-c').classList.add('active');
-        document.getElementById('confirm-ref').textContent = response.reference;
-        const eta = Math.floor(Math.random() * 16) + 15;
-        document.getElementById('confirm-eta').textContent = eta + ' min';
+        const redirectAmount = calcTotal() * 100;
+        window.location.href = '/thank-you.html'
+          + '?ref='    + encodeURIComponent(response.reference)
+          + '&item='   + encodeURIComponent(SOUP_NAME)
+          + '&amount=' + redirectAmount
+          + '&qty='    + qty;
       }
     });
     handler.openIframe();
